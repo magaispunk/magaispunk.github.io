@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>проверка</title>
+    <title>Софа, пошли гулять!</title>
     <style>
         body {
             display: flex;
@@ -12,6 +12,7 @@
             height: 100vh;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+            flex-direction: column;
         }
         #box {
             width: 200px;
@@ -27,20 +28,34 @@
             text-align: center;
             transition: all 0.3s ease;
         }
+        #flower {
+            display: none;
+            width: 150px;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
     </style>
 </head>
 <body>
     <div id="box" onclick="changeText()">Нажми</div>
+    <img id="flower" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Red_Rose_%28Vijay_Soni%29.jpg/800px-Red_Rose_%28Vijay_Soni%29.jpg" alt="Цветок">
 
     <script>
         function changeText() {
             let box = document.getElementById("box");
+            let flower = document.getElementById("flower");
+            
             box.innerText = "Софа, пошли гулять и шароебиться";
             box.style.backgroundColor = "white";
             box.style.color = "black";
             box.style.fontSize = "20px";
+
+            flower.style.display = "block";
+            setTimeout(() => {
+                flower.style.opacity = "1";
+            }, 100);  
         }
     </script>
 </body>
 </html>
-
