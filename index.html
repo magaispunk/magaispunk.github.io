@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Софа, пошли гулять!</title>
+    <title>проверка ляля мася</title>
     <style>
         body {
             display: flex;
@@ -11,7 +11,7 @@
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            font-family: monospace;
             flex-direction: column;
         }
         #box {
@@ -30,7 +30,8 @@
         }
         #flower {
             display: none;
-            width: 150px;
+            white-space: pre;
+            font-size: 14px;
             margin-top: 20px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
@@ -39,7 +40,21 @@
 </head>
 <body>
     <div id="box" onclick="changeText()">Нажми</div>
-    <img id="flower" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Red_Rose_%28Vijay_Soni%29.jpg/800px-Red_Rose_%28Vijay_Soni%29.jpg" alt="Цветок">
+    <pre id="flower">
+        .     .
+     ..  :"""""":  ..
+     .  '         '  .
+    :  |           |  :
+    :  |           |  :
+     :  ':.       .'  :
+      '.  '"'"'"'  .'
+        '.......'
+          ':'
+          ':'
+          ':'
+          ':'
+          ':'
+    </pre>
 
     <script>
         function changeText() {
@@ -54,7 +69,7 @@
             flower.style.display = "block";
             setTimeout(() => {
                 flower.style.opacity = "1";
-            }, 100);  
+            }, 100);
         }
     </script>
 </body>
