@@ -13,14 +13,34 @@
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
-        h1 {
-            font-size: 50px;
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
             font-weight: bold;
-            color: #333;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
         }
     </style>
 </head>
 <body>
-    <h1>СОФА, ПОШЛИ ГУЛЯТЬ!</h1>
+    <div id="box" onclick="changeText()">Нажми</div>
+
+    <script>
+        function changeText() {
+            let box = document.getElementById("box");
+            box.innerText = "Софа, пошли гулять и шароебиться";
+            box.style.backgroundColor = "white";
+            box.style.color = "black";
+            box.style.fontSize = "20px";
+        }
+    </script>
 </body>
 </html>
+
