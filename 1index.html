@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Софа, пошли гулять!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onclick="changeText()">Нажми</div>
+
+    <script>
+        function changeText() {
+            let box = document.getElementById("box");
+            box.innerText = "Софа, пошли гулять и шароебиться";
+            box.style.backgroundColor = "white";
+            box.style.color = "black";
+            box.style.fontSize = "20px";
+        }
+    </script>
+</body>
+</html>
